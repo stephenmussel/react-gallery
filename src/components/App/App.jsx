@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import GalleryList from './GalleryList/GalleryList';
 
 function App() {
 
@@ -29,19 +30,13 @@ function App() {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
+          <h1 className="App-title">Life of Phaydara</h1>
         </header>
         {/* <p>Gallery goes here</p> */}
         {/* {JSON.stringify(gallery)} */}
-        {gallery.map(each => (
-          <div>
-            <img src={each.path} />
-            <h2>{each.title}</h2>
-            <p>{each.description}</p>
-            <p>{each.likes}</p>
-          </div>
-
-        ))}
+        <GalleryList 
+          gallery={gallery}
+        />
       </div>
     );
 }
