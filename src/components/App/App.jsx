@@ -20,6 +20,7 @@ function App() {
       url: '/gallery',
     }).then(response => {
       console.log('response.data: ', response.data);
+      setGallery(response.data);
     }).catch(error => {
       alert('error in fetchGallery: ', error);
     });
@@ -30,8 +31,17 @@ function App() {
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg"/>
+        {/* <p>Gallery goes here</p> */}
+        {/* {JSON.stringify(gallery)} */}
+        {gallery.map(each => (
+          <div>
+            <img src={each.path} />
+            <h2>{each.title}</h2>
+            <p>{each.description}</p>
+            <p>{each.likes}</p>
+          </div>
+
+        ))}
       </div>
     );
 }
