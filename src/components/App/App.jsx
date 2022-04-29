@@ -27,6 +27,20 @@ function App() {
     });
   };
 
+  const heartPhoto = (photoId) => {
+    console.log('in heartPhoto');
+
+    axios({
+        method: 'PUT',
+        url: `gallery/like/${photoId}`
+    }).then(response => {
+        console.log('clicked like: ', response);
+        fetchGallery();
+    }).catch(error => {
+        alert('error in liking pic!', error);
+    });
+};
+
     return (
       <div className="App">
         <header className="App-header">
@@ -36,6 +50,7 @@ function App() {
         {/* {JSON.stringify(gallery)} */}
         <GalleryList 
           gallery={gallery}
+          heartPhoto={heartPhoto}
         />
       </div>
     );

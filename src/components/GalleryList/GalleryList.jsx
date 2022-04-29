@@ -1,12 +1,13 @@
 import GalleryItem from "../GalleryItem/GalleryItem";
 
-function GalleryList({gallery}) {
+function GalleryList({ gallery, heartPhoto }) {
     return(
         <>
         {gallery.map(each => (
             <GalleryItem 
                 key={each.id}
                 each={each}
+                heartPhoto={heartPhoto}
             />
         ))}
         </>

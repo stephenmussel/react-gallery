@@ -1,23 +1,8 @@
 import { useState } from 'react';
-import axios from 'axios';
 
-function GalleryItem({ each }) {
+function GalleryItem({ each, heartPhoto }) {
 
     const [click, setClick] = useState(true);
-
-    const heartPhoto = (photoId) => {
-        console.log('in heartPhoto');
-
-        axios({
-            method: 'PUT',
-            url: `gallery/like/${photoId}`
-        }).then(response => {
-            console.log('clicked like: ', response);
-            fetch
-        }).catch(error => {
-            alert('error in liking pic!', error);
-        });
-    };
 
     return (
         <div key={each.id}>
