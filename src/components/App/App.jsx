@@ -3,6 +3,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList';
+import GalleryForm from '../GalleryForm/GalleryForm';
 
 function App() {
 
@@ -48,6 +49,7 @@ function App() {
         </header>
         {/* <p>Gallery goes here</p> */}
         {/* {JSON.stringify(gallery)} */}
+        <GalleryForm />
         <GalleryList 
           gallery={gallery}
           heartPhoto={heartPhoto}
