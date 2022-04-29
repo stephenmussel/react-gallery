@@ -44,7 +44,7 @@ function App() {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Life of Phaydara</h1>
+          <h1 className="App-title">Likes of Phaydara</h1>
         </header>
         {/* <p>Gallery goes here</p> */}
         {/* {JSON.stringify(gallery)} */}
