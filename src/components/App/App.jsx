@@ -1,7 +1,21 @@
 import React from 'react';
 import './App.css';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function App() {
+
+  const [gallery, setGallery] = useState([]);
+
+  useEffect(() => {
+    console.log('in useEffect');
+    fetchGallery();
+  }, [])
+
+  const fetchGallery = () => {
+    console.log('in fetchGallery');
+  }
+
     return (
       <div className="App">
         <header className="App-header">
