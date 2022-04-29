@@ -1,13 +1,13 @@
+import GalleryItem from "../../GalleryItem/GalleryItem";
+
 function GalleryList({gallery}) {
     return(
         <>
         {gallery.map(each => (
-          <div>
-            <img src={each.path} />
-            <h2>{each.title}</h2>
-            <p>{each.description}</p>
-            <p>{each.likes}</p>
-          </div>
+            <GalleryItem 
+                key={each.id}
+                each={each}
+            />
         ))}
         </>
     )
