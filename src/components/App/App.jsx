@@ -14,7 +14,16 @@ function App() {
 
   const fetchGallery = () => {
     console.log('in fetchGallery');
-  }
+
+    axios({
+      method: 'GET',
+      url: '/gallery',
+    }).then(response => {
+      console.log('response.data: ', response.data);
+    }).catch(error => {
+      alert('error in fetchGallery: ', error);
+    });
+  };
 
     return (
       <div className="App">
