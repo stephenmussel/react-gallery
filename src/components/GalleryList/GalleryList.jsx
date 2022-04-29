@@ -1,4 +1,4 @@
-import GalleryItem from "../../GalleryItem/GalleryItem";
+import GalleryItem from "../GalleryItem/GalleryItem";
 
 function GalleryList({gallery}) {
     return(
