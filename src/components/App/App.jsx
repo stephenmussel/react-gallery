@@ -10,7 +10,7 @@ function App() {
   const [gallery, setGallery] = useState([]);
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-
+  const [path, setPath] = useState('');
 
   useEffect(() => {
     console.log('in useEffect');
@@ -49,10 +49,11 @@ function App() {
     event.preventDefault();
     console.log('in handleSubmit');
     
-    if(title.length === 0 || description.length === 0) {
-      alert('Enter a title and description.')
+    if(path.length === 0 || title.length === 0 || description.length === 0) {
+      alert(`You can't leave anything blank.`)
+    } else {
+      addPhoto();
     };
-    addPhoto();
   };
 
   const addPhoto = () => {
@@ -62,6 +63,7 @@ function App() {
       method: 'POST',
       url: 'gallery',
       data: {
+        path: path,
         title: title,
         description: description,
       }
@@ -81,6 +83,7 @@ function App() {
       {/* {JSON.stringify(gallery)} */}
       <GalleryForm
         handleSubmit={handleSubmit}
+        setPath={setPath}
         setTitle={setTitle}
         setDescription={setDescription}
       />

@@ -26,7 +26,7 @@ const pool = require('../modules/pool')
 router.get('/', (req, res) => {
     console.log('in router.get');
 
-    const queryText = `SELECT * FROM "photos" ORDER BY "id";`;
+    const queryText = `SELECT * FROM "photos" ORDER BY "id" DESC;`;
     pool.query(queryText)
         .then(result => {
             console.log('pics from the DB: ', result);
@@ -62,9 +62,13 @@ router.post('/', (req, res) => {
 
     const newPhoto = req.body;
     console.log('newPhoto: ', newPhoto);
-    const queryText = `INSERT INTO "photos" ("title")
-                    VALUES ($1);`;
-    pool.query(queryText, [newPhoto.title])
+    const queryText = `INSERT INTO "photos" ("path", "title", "description")
+                    VALUES ($1, $2, $3);`;
+    pool.query(queryText, [
+        newPhoto.path,
+        newPhoto.title,
+        newPhoto.description
+    ])
         .then(result => {
             console.log('photo added: ', newPhoto);
             res.sendStatus(201);

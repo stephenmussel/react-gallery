@@ -7,7 +7,7 @@ function GalleryItem({ each, heartPhoto }) {
     return (
         <div key={each.id}>
             <div onClick={() => click === true ? setClick(false) : setClick(true)}>
-                {click ? <img src={each.path} /> : <div><p>{each.description}</p></div>}
+                {click ? <img src={each.path} width="500"/> : <div><p>{each.description}</p></div>}
             </div>
             <h2>{each.title}</h2>
             <p>
