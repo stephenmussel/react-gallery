@@ -51,6 +51,23 @@ function App() {
     if(title.length === 0) {
       alert('Enter a title.')
     };
+    addPhoto();
+  };
+
+  const addPhoto = () => {
+    console.log('in addPhoto');
+
+    axios({
+      method: 'PUT',
+      url: 'gallery',
+      data: {
+        title: title,
+      }
+    }).then(response => {
+      fetchGallery();
+    }).catch(error => {
+      console.log('error in adding new image: ', error);
+    });
   };
 
   return (
