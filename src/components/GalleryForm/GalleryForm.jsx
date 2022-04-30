@@ -1,4 +1,4 @@
-function GalleryForm({ handleSubmit, setTitle }) {
+function GalleryForm({ handleSubmit, setTitle, setDescription }) {
 
     return(
         <>
@@ -21,6 +21,7 @@ function GalleryForm({ handleSubmit, setTitle }) {
                     cols="21"
                     placeholder="description"
                     style={{marginBottom: 5}}
+                    onChange={(event) => setDescription(event.target.value)}
                 ></textarea><br />
                 <input 
                     type="submit"

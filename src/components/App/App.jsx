@@ -9,6 +9,7 @@ function App() {
 
   const [gallery, setGallery] = useState([]);
   const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
 
 
   useEffect(() => {
@@ -48,8 +49,8 @@ function App() {
     event.preventDefault();
     console.log('in handleSubmit');
     
-    if(title.length === 0) {
-      alert('Enter a title.')
+    if(title.length === 0 || description.length === 0) {
+      alert('Enter a title and description.')
     };
     addPhoto();
   };
@@ -62,9 +63,10 @@ function App() {
       url: 'gallery',
       data: {
         title: title,
+        description: description,
       }
     }).then(response => {
-      fetchGallery();
+      fetchGallery(); // fetches updated gallery
     }).catch(error => {
       console.log('error in adding new image: ', error);
     });
@@ -80,6 +82,7 @@ function App() {
       <GalleryForm
         handleSubmit={handleSubmit}
         setTitle={setTitle}
+        setDescription={setDescription}
       />
       <GalleryList
         gallery={gallery}
