@@ -58,7 +58,7 @@ function App() {
     console.log('in addPhoto');
 
     axios({
-      method: 'PUT',
+      method: 'POST',
       url: 'gallery',
       data: {
         title: title,
