@@ -56,4 +56,24 @@ router.put('/like/:id', (req, res) => {
         });
 });
 
+// POST route
+router.post('/', (req, res) => {
+    console.log('in router.post');
+
+    const newPhoto = req.body;
+    console.log('newPhoto: ', newPhoto);
+    const queryText = `INSERT INTO "photos" ("title")
+                    VALUES ($1);`;
+    pool.query(queryText, [newPhoto.title])
+        .then(result => {
+            console.log('photo added: ', newPhoto);
+            res.sendStatus(201);
+        })
+        .catch(error => {
+            console.log('error: ', error);
+            alert('error in adding photo!')
+            res.sendStatus(500)  
+        });
+});
+
 module.exports = router;
