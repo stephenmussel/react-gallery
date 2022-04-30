@@ -1,4 +1,4 @@
-function GalleryForm({ handleSubmit, setPath, setTitle, setDescription }) {
+function GalleryForm({ handleSubmit, setPath, setTitle, setDescription, path, title, description }) {
 
     return(
         <>
@@ -9,12 +9,14 @@ function GalleryForm({ handleSubmit, setPath, setTitle, setDescription }) {
                     placeholder="url"
                     style={{marginBottom: 5}}
                     onChange={(event) => setPath(event.target.value)}
+                    value={path}
                 /><br />
                 <input 
                     type="text"
                     placeholder="title"
                     style={{marginBottom: 5}}
                     onChange={(event) => setTitle(event.target.value)}
+                    value={title}
                 /><br />
                 <textarea 
                     type="text"
@@ -23,6 +25,7 @@ function GalleryForm({ handleSubmit, setPath, setTitle, setDescription }) {
                     placeholder="description"
                     style={{marginBottom: 5}}
                     onChange={(event) => setDescription(event.target.value)}
+                    value={description}
                 ></textarea><br />
                 <input 
                     type="submit"

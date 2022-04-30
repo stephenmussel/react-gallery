@@ -68,7 +68,14 @@ function App() {
         description: description,
       }
     }).then(response => {
-      fetchGallery(); // fetches updated gallery
+
+      // clear inputs
+      setPath('');
+      setTitle('');
+      setDescription('')
+
+      // fetches updated gallery
+      fetchGallery(); 
     }).catch(error => {
       console.log('error in adding new image: ', error);
     });
@@ -103,6 +110,9 @@ function App() {
         setPath={setPath}
         setTitle={setTitle}
         setDescription={setDescription}
+        path={path}
+        title={title}
+        description={description}
       />
       <GalleryList
         gallery={gallery}
