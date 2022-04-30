@@ -1,8 +1,9 @@
-function GalleryForm() {
+function GalleryForm({ handleSubmit, setTitle }) {
+
     return(
         <>
-            <h1>Gallery Form</h1>
-            <form>
+            <h1>Add New Photos</h1>
+            <form onSubmit={handleSubmit}>
                 <input 
                     type="text"
                     placeholder="url"
@@ -12,6 +13,7 @@ function GalleryForm() {
                     type="text"
                     placeholder="title"
                     style={{marginBottom: 5}}
+                    onChange={(event) => setTitle(event.target.value)}
                 /><br />
                 <textarea 
                     type="text"
