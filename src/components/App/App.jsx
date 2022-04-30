@@ -33,7 +33,7 @@ function App() {
 
     axios({
         method: 'PUT',
-        url: `gallery/like/${photoId}`
+        url: `/gallery/like/${photoId}`
     }).then(response => {
         console.log('clicked like: ', response);
         fetchGallery();

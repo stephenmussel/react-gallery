@@ -33,7 +33,27 @@ router.get('/', (req, res) => {
             res.send(result.rows) 
         }).catch(error => {
             alert('error in fetching pics from DB: ', error);
+            res.sendStatus(500);
         });
 }); // END GET route
+
+// PUT route
+router.put('/like/:id', (req, res) => {
+    console.log('in router.put');
+
+    const photoId = req.params.id;
+    console.log('photoId: ', photoId);
+    const queryText = `UPDATE "photos" SET "likes" = "likes" + 1 WHERE "id" = $1;`;
+    pool.query(queryText, [photoId])
+        .then(result => {
+            console.log('updated likes w/photoId: ', photoId);
+            res.sendStatus(200);
+        })
+        .catch(error => {
+            console.log('error: ', error);
+            alert('error in liking photo!');
+            res.sendStatus(500);
+        });
+});
 
 module.exports = router;
