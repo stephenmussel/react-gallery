@@ -74,6 +74,10 @@ function App() {
     });
   };
 
+  const deletePhoto = () => {
+    console.log('clicked delete button');
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -90,6 +94,7 @@ function App() {
       <GalleryList
         gallery={gallery}
         heartPhoto={heartPhoto}
+        deletePhoto={deletePhoto}
       />
     </div>
   );

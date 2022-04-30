@@ -1,6 +1,6 @@
 import GalleryItem from "../GalleryItem/GalleryItem";
 
-function GalleryList({ gallery, heartPhoto }) {
+function GalleryList({ gallery, heartPhoto, deletePhoto }) {
     return(
         <>
         {gallery.map(each => (
@@ -8,6 +8,7 @@ function GalleryList({ gallery, heartPhoto }) {
                 key={each.id}
                 each={each}
                 heartPhoto={heartPhoto}
+                deletePhoto={deletePhoto}
             />
         ))}
         </>

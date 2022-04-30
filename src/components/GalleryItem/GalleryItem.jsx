@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function GalleryItem({ each, heartPhoto }) {
+function GalleryItem({ each, heartPhoto, deletePhoto }) {
 
     const [click, setClick] = useState(true);
 
@@ -15,7 +15,8 @@ function GalleryItem({ each, heartPhoto }) {
                 &nbsp;&nbsp;
                 {each.likes}
             </p>
-            <button onClick={() => heartPhoto(each.id)}>Like</button>
+            <button onClick={() => heartPhoto(each.id)} style={{marginRight: 5}}>Like</button>
+            <button onClick={() => deletePhoto(each.id)}>Delete</button>
             <br /><br />
         </div>
     )
