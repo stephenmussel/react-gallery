@@ -54,7 +54,7 @@ router.put('/like/:id', (req, res) => {
             alert('error in liking photo!');
             res.sendStatus(500);
         });
-});
+}); // END PUT route
 
 // POST route
 router.post('/', (req, res) => {
@@ -78,6 +78,25 @@ router.post('/', (req, res) => {
             alert('error in adding photo!')
             res.sendStatus(500)  
         });
-});
+}); // END POST route
+
+// DELETE route
+router.delete('/:id', (req, res) => {
+    console.log('in router.delete');
+
+    const photoId = req.params.id
+    console.log('photoId: ', photoId);
+    const queryText = `DELETE FROM "photos" WHERE "id" = $1;`;
+    pool.query(queryText, [photoId])
+        .then(result => {
+            console.log('deleted photo with ID: ', photoId);
+            res.sendStatus(200);
+        })
+        .catch(error => {
+            console.log('error: ', error);
+            alert('error in deleting photo!')
+            res.sendStatus(500)
+        });
+}); // END DELETE route
 
 module.exports = router;
