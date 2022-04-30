@@ -74,9 +74,22 @@ function App() {
     });
   };
 
-  const deletePhoto = () => {
+  const deletePhoto = (id) => {
     console.log('clicked delete button');
-  }
+
+    if(confirm('Are you sure you want to delete this?')) {
+      axios({
+        method: 'DELETE',
+        url: `/gallery/${id}`
+      }).then(response => {
+        console.log('response: ', response);
+        fetchGallery();
+      }).catch(error => {
+        console.log('error: ', error);
+        alert('error in deleting photo!')
+      });
+    };
+  };
 
   return (
     <div className="App">
