@@ -1,8 +1,10 @@
+import Button from '@mui/material/Button';
+
 function GalleryForm({ handleSubmit, setPath, setTitle, setDescription, path, title, description }) {
 
     return(
         <>
-            <h1>Add New Photos</h1>
+            <h2>Add New Photos</h2>
             <form onSubmit={handleSubmit}>
                 <input 
                     type="text"
@@ -27,10 +29,11 @@ function GalleryForm({ handleSubmit, setPath, setTitle, setDescription, path, ti
                     onChange={(event) => setDescription(event.target.value)}
                     value={description}
                 ></textarea><br />
-                <input 
+                {/* <input 
                     type="submit"
                     value="Add"
-                />
+                /> */}
+                <Button variant="contained">Add</Button>
             </form>
             <br /><br />
         </>

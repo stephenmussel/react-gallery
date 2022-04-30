@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import Button from '@mui/material/Button';
+
 
 function GalleryItem({ each, heartPhoto, deletePhoto }) {
 
@@ -15,8 +17,8 @@ function GalleryItem({ each, heartPhoto, deletePhoto }) {
                 &nbsp;&nbsp;
                 {each.likes}
             </p>
-            <button onClick={() => heartPhoto(each.id)} style={{marginRight: 5}}>Like</button>
-            <button onClick={() => deletePhoto(each.id)}>Delete</button>
+            <Button variant="contained" onClick={() => heartPhoto(each.id)} style={{marginRight: 5}}>Like</Button>
+            <Button variant="contained" onClick={() => deletePhoto(each.id)} color="secondary">Delete</Button>
             <br /><br />
         </div>
     )
