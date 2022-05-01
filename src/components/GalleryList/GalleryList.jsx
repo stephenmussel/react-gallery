@@ -7,9 +7,9 @@ function GalleryList({ gallery, heartPhoto, deletePhoto }) {
     return (
         <div className="photo-container">
             {gallery.map(each => (
-                <Paper elevation={5}>
+                <Paper elevation={5} key={each.id}>
                     <GalleryItem
-                        key={each.id}
+                        // key={each.id}
                         each={each}
                         heartPhoto={heartPhoto}
                         deletePhoto={deletePhoto}

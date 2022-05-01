@@ -22,8 +22,12 @@ function GalleryItem({ each, heartPhoto, deletePhoto }) {
                     {each.likes}
                 </IconButton>
                 
-                <IconButton aria-label="delete" size="large">
-                    <DeleteIcon onClick={() => deletePhoto(each.id)} style={{marginRight: 5}}/>
+                <IconButton 
+                    aria-label="delete" 
+                    size="large"
+                    onClick={() => deletePhoto(each.id)}
+                >
+                    <DeleteIcon style={{marginRight: 5}}/>
                 </IconButton>
             </div>
             <br />
