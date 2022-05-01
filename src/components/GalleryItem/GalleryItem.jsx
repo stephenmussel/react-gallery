@@ -1,6 +1,10 @@
 import { useState } from 'react';
-import Button from '@mui/material/Button';
-import DeleteRounded from '@mui/icons-material/DeleteRounded';
+import Stack from '@mui/material/Stack';
+
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import '../GalleryItem/GalleryItem.css';
 
 function GalleryItem({ each, heartPhoto, deletePhoto }) {
 
@@ -9,17 +13,20 @@ function GalleryItem({ each, heartPhoto, deletePhoto }) {
     return (
         <div key={each.id}>
             <div onClick={() => click === true ? setClick(false) : setClick(true)}>
-                {click ? <img src={each.path} width="500"/> : <div><p>{each.description}</p></div>}
+                {click ? <img src={each.path} width="500" /> : <div><p>{each.description}</p></div>}
             </div>
             <h2>{each.title}</h2>
-            <p>
-                &#10084;&#65039;
-                &nbsp;&nbsp;
-                {each.likes}
-            </p>
-            <Button variant="contained" onClick={() => heartPhoto(each.id)} style={{marginRight: 5}}>Like</Button>
-            <DeleteRounded onClick={() => deletePhoto(each.id)}>Delete</DeleteRounded>
-            <br /><br />
+            <div className="heart-container">
+                <IconButton onClick={() => heartPhoto(each.id)}>
+                    <FavoriteIcon color="secondary" style={{marginRight: 5, marginLeft: 5}}/>
+                    {each.likes}
+                </IconButton>
+                
+                <IconButton aria-label="delete" size="large">
+                    <DeleteIcon onClick={() => deletePhoto(each.id)} style={{marginRight: 5}}/>
+                </IconButton>
+            </div>
+            <br />
         </div>
     )
 }
