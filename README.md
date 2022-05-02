@@ -1,7 +1,7 @@
 # Checklist
 
 - [ ] Readme
-    - [ ] T.O.C.
+    - [x] T.O.C.
     - [ ] Description
     - [ ] Screen Shots
     - [x] Prerequisites
@@ -67,8 +67,9 @@ To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.he
 
 <!-- SCREEN SHOT -->
 ## Screen Shots
-
-Include one or two screen shots of your project here (optional). Remove if unused.  
+ 
+![Screen Shot 1](/public/images/react-gallery-1.jpg)
+<br />
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
