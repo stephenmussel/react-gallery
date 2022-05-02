@@ -12,7 +12,7 @@ function GalleryItem({ each, heartPhoto, deletePhoto }) {
 
     return (
         <div key={each.id}>
-            <div onClick={() => click === true ? setClick(false) : setClick(true)}>
+            <div onClick={() => click === true ? setClick(false) : setClick(true)} className="photo-container">
                 {click ? <img src={each.path} width="500" /> : <div><p>{each.description}</p></div>}
             </div>
             <h2>{each.title}</h2>
