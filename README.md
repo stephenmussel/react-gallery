@@ -1,6 +1,15 @@
 # Checklist
 
 - [ ] Readme
+    - [ ] T.O.C.
+    - [ ] Description
+    - [ ] Screen Shots
+    - [x] Prerequisites
+    - [x] Installation
+    - [ ] Usage
+    - [x] Built With
+    - [x] Acknowledgement
+    - [x] Support
 - [ ] More CSS ([form](https://mui.com/material-ui/react-text-field/#form-props))
 - [ ] Use [multer](http://github.com/expressjs/multer) for image upload
 - [ ] Try [MUI image list](https://mui.com/material-ui/react-image-list/)
@@ -73,16 +82,13 @@ Include one or two screen shots of your project here (optional). Remove if unuse
 <!-- INSTALLATION -->
 ## Installation
 
-How do you get your application up and running? This is a step by step list for how another developer could get this project up and running. The good target audience in terms of knowledge, would be a fellow Primer from another cohort being able to spin up this project. Note that you do not need a paragraph here to intro Installation. It should be step-by-step.
-
-If your application has secret keys (for example --  Twilio), make sure you tell them how to set that up, both in getting the key and then what to call it in the `.env` file.
-
 1. Create a database named `react-gallery`,
 2. The queries in the `tables.sql` file are set up to create all the necessary tables and populate the needed data to allow the application to run correctly. The project is built on [Postgres](https://www.postgresql.org/download/), so you will need to make sure to have that installed. We recommend using Postico to run those queries as that was used to create the queries, 
 3. Open up your editor of choice and run an `npm install`
 4. Run `npm run server` in your terminal
-5. Run `npm run client` in your terminal
-6. The `npm run client` command will open up a new browser tab for you! If it doesn't type: localhost:3000 in a new tab.  
+5. Now that the server is running, open a new terminal with `cmd + t`.
+6. Run `npm run client` in your terminal
+7. The `npm run client` command will open up a new browser tab for you! If it doesn't enter: localhost:3000 in a new tab.  
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -101,8 +107,6 @@ How does someone use this application? Tell a user story here.
 
 <!-- BUILT WITH -->
 ## Built With
-
-List technologies and frameworks here  
 
 * [React.js](https://reactjs.org/)
 * [Axios](http://npmjs.com/package/axios)
