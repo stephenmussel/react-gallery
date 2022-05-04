@@ -20,7 +20,11 @@ function GalleryItem({ each, heartPhoto, deletePhoto }) {
                     onClick={() => click ? setClick(false) : setClick(true)}
                     className={click ? "" : "reduce-opacity"}
                 />
-                
+                <p className="photo-description"
+                    onClick={() => click ? setClick(false) : setClick(true)}
+                >
+                    {click ? "" : each.description} 
+                </p> 
             </div>
             <div className="heart-delete-container">
                 <div>
@@ -39,8 +43,7 @@ function GalleryItem({ each, heartPhoto, deletePhoto }) {
                     </IconButton>
                 </div>
             </div>
-            {/* {click ? <p>image</p> : <p>{each.description}</p>} */}
-            {click ? "" : <p>{each.description}</p>}
+            {/* {click ? "" : <p>{each.description}</p>}  */}
 
         </div>
 

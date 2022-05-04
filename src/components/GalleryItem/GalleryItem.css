@@ -1,13 +1,7 @@
-.heart-delete-container {
+.item-container {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 15px;
-}
-
-.photo-container {
-    cursor: pointer;
+    flex-flow: column wrap;
+    justify-content: center;
 }
 
 .photo-title {
@@ -17,7 +11,30 @@
     margin-left: 25px;
 }
 
+.photo-container {
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+
 .reduce-opacity {
     opacity: .05;
 }
 
+.photo-description {
+    font-style: italic;
+    align-items: center;
+    font-size: 25pt;
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heart-delete-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15px;
+}
