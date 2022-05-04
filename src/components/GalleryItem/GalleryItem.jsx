@@ -12,10 +12,16 @@ function GalleryItem({ each, heartPhoto, deletePhoto }) {
 
     return (
         <div key={each.id} className="item-container">
-            <div onClick={() => click === true ? setClick(false) : setClick(true)} className="photo-container">
-                {click ? <img src={each.path} width="500" /> : <div><p>{each.description}</p></div>}
+            <h2 className="photo-title">{each.title}</h2>
+            <div className="photo-container">
+                <img 
+                    src={each.path} 
+                    alt="gallery photo"
+                    onClick={() => click ? setClick(false) : setClick(true)}
+                    className={click ? "" : "reduce-opacity"}
+                />
+                
             </div>
-            <h2>{each.title}</h2>
             <div className="heart-delete-container">
                 <div>
                     <IconButton onClick={() => heartPhoto(each.id)}>
@@ -33,8 +39,12 @@ function GalleryItem({ each, heartPhoto, deletePhoto }) {
                     </IconButton>
                 </div>
             </div>
-            <br />
+            {/* {click ? <p>image</p> : <p>{each.description}</p>} */}
+            {click ? "" : <p>{each.description}</p>}
+
         </div>
+
+        
     )
 }
 

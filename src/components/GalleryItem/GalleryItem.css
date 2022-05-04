@@ -3,8 +3,21 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    margin-left: 15px;
 }
 
 .photo-container {
     cursor: pointer;
 }
+
+.photo-title {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin-left: 25px;
+}
+
+.reduce-opacity {
+    opacity: .05;
+}
+
