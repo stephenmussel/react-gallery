@@ -11,24 +11,27 @@ function GalleryItem({ each, heartPhoto, deletePhoto }) {
     const [click, setClick] = useState(true);
 
     return (
-        <div key={each.id} className="photo-container">
-            <div onClick={() => click === true ? setClick(false) : setClick(true)}>
+        <div key={each.id} className="item-container">
+            <div onClick={() => click === true ? setClick(false) : setClick(true)} className="photo-container">
                 {click ? <img src={each.path} width="500" /> : <div><p>{each.description}</p></div>}
             </div>
             <h2>{each.title}</h2>
-            <div className="heart-container">
-                <IconButton onClick={() => heartPhoto(each.id)}>
-                    <FavoriteIcon color="secondary" style={{marginRight: 5, marginLeft: 5}}/>
-                    {each.likes}
-                </IconButton>
-                
-                <IconButton 
-                    aria-label="delete" 
-                    size="large"
-                    onClick={() => deletePhoto(each.id)}
-                >
-                    <DeleteIcon style={{marginRight: 5}}/>
-                </IconButton>
+            <div className="heart-delete-container">
+                <div>
+                    <IconButton onClick={() => heartPhoto(each.id)}>
+                        <FavoriteIcon color="secondary" style={{ marginRight: 5, marginLeft: 5 }} />
+                        {each.likes}
+                    </IconButton>
+                </div>
+                <div>
+                    <IconButton
+                        aria-label="delete"
+                        size="large"
+                        onClick={() => deletePhoto(each.id)}
+                    >
+                        <DeleteIcon style={{ marginRight: 5 }} />
+                    </IconButton>
+                </div>
             </div>
             <br />
         </div>

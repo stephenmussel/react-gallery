@@ -1,8 +1,8 @@
-.heart-container {
+.heart-delete-container {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .photo-container {
