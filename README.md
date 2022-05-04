@@ -1,18 +1,8 @@
 # Checklist
 
 - [ ] Readme
-    - [x] T.O.C.
     - [ ] Description
-    - [ ] Add GIF
-    - [x] Prerequisites
-    - [x] Installation
-    - [x] Usage
-    - [x] Built With
-    - [x] Acknowledgement
-    - [x] Support
-- [ ] More CSS ([form](https://mui.com/material-ui/react-text-field/#form-props))
 - [ ] Use [multer](http://github.com/expressjs/multer) for image upload
-- [ ] Try [MUI image list](https://mui.com/material-ui/react-image-list/)
 - [ ] Add comments
 - [ ] Deploy to Heroku?
 - [ ] Refactor  
@@ -35,7 +25,7 @@
   <ol>
     <li><a href="#description">Description</a></li>
     <li>
-      <a href="#screen-shots">Screen Shots</a></li>
+      <a href="#preview">Preview</a></li>
       <ul>
         <li>
             <a href="#prerequisites">Prerequisites</a></li>
@@ -70,11 +60,12 @@ To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.he
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- SCREEN SHOT -->
-## Screen Shots
- 
-![Screen Shot 1](/public/images/react-gallery-1.jpg)
+<!-- Preview -->
+## Preview  
 <br />
+
+![React Gallery GIF](/public/images/react-gallery.gif)
+<br /> 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
