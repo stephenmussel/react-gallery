@@ -11,8 +11,8 @@ function GalleryItem({ each, heartPhoto, deletePhoto }) {
     const [click, setClick] = useState(true);
 
     return (
-        <div key={each.id}>
-            <div onClick={() => click === true ? setClick(false) : setClick(true)} className="photo-container">
+        <div key={each.id} className="photo-container">
+            <div onClick={() => click === true ? setClick(false) : setClick(true)}>
                 {click ? <img src={each.path} width="500" /> : <div><p>{each.description}</p></div>}
             </div>
             <h2>{each.title}</h2>

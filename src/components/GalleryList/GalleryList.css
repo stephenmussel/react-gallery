@@ -1,8 +1,7 @@
-.photo-container {
+.gallery-container {
     display: flex;
-    justify-content: space-evenly; 
-    flex-wrap: wrap;
-    margin: 10px;
-    gap: 20px;   
-    cursor: pointer;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 100px;
+    row-gap: 50px;
 }

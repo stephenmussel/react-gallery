@@ -5,7 +5,7 @@ import Paper from '@mui/material/Paper';
 
 function GalleryList({ gallery, heartPhoto, deletePhoto }) {
     return (
-        <div className="photo-container">
+        <div className="gallery-container">
             {gallery.map(each => (
                 <Paper elevation={5} key={each.id}>
                     <GalleryItem
