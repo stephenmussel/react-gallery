@@ -4,12 +4,17 @@
 
 .App-header {
   background-color: #222;
-  padding: 1em;
+  padding: 2em;
   color: white;
-  margin-bottom: 1em;
+  margin-bottom: em;
 }
 
 .App-title {
   font-size: 1.5em;
 }
 
+.sticky-container {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}

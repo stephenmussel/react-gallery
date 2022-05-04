@@ -5,7 +5,7 @@ import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList';
 import GalleryForm from '../GalleryForm/GalleryForm';
 import Alert from '@mui/material/Alert';
-
+import Divider from '@mui/material/Divider';
 
 function App() {
 
@@ -102,6 +102,7 @@ function App() {
 
   return (
     <div className="App">
+      <div className="sticky-container">
       <header className="App-header">
         <h1 className="App-title">Likes of Phaydara</h1>
       </header>
@@ -116,6 +117,8 @@ function App() {
         title={title}
         description={description}
       />
+      {/* <Divider></Divider> */}
+      </div>
       <GalleryList
         gallery={gallery}
         heartPhoto={heartPhoto}

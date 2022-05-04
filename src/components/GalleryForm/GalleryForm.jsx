@@ -6,7 +6,7 @@ import '../GalleryForm/GalleryForm.css';
 function GalleryForm({ handleSubmit, setPath, setTitle, setDescription, path, title, description }) {
 
     return (
-        <>
+        <div className="form-container">
             <h2>Add New Photos</h2>
             {/* <form onSubmit={handleSubmit}>
                 <input 
@@ -68,7 +68,7 @@ function GalleryForm({ handleSubmit, setPath, setTitle, setDescription, path, ti
                 </div>
             </Box>
             <br /><br />
-        </>
+        </div>
     )
 }
 
