@@ -1,14 +1,3 @@
-# Checklist
-
-- [ ] Readme
-    - [ ] Description
-- [ ] Use [multer](http://github.com/expressjs/multer) for image upload
-- [ ] Add comments
-- [ ] Deploy to Heroku?
-- [ ] Refactor  
-<br />
-
-
 <!-- STATS -->
 <!-- 
 ![MIT LICENSE](https://img.shields.io/github/license/scottbromander/the_marketplace.svg?style=flat-square)
@@ -16,6 +5,13 @@
 ![TOP_LANGUAGE](https://img.shields.io/github/languages/top/scottbromander/the_marketplace.svg?style=flat-square)
 ![FORKS](https://img.shields.io/github/forks/scottbromander/the_marketplace.svg?style=social)
 -->
+
+<!-- To Do Checklist -->
+# To Do Checklist
+
+- [ ] Add comments
+- [ ] Refactor  
+<br />
 
 # REACT GALLERY  
 
@@ -34,6 +30,7 @@
     </li>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#updates">Updates</a></li>
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#acknowledgement">Acknowledgment</a></li>
     <li><a href="#support">Support</a></li>
@@ -46,17 +43,11 @@
 
 _Duration: 2 Day Sprint_
 
-Your project description goes here. What problem did you solve? How did you solve it? 
+The react gallery app displays photos. Information including: file path, title, description, and number of likes are stored on a SQL database.
 
-This app displays photos and relevant info from a SQL database. The database stores a file path, title, description, and number of likes.
+The App.jsx uses HTTP requests to retrieve/update info from a database. The info is passed to the GalleryList component via props. This component has a map function that passes each photo's info into a GalleryItem component. The GalleryItem component displays the photo, title, description, and number of likes. The user is able to update the like count from a PUT request via props. The component also displays a delete button. Conditional rendering is used to display the description when you click the photo. Additionally, there's a GalleryForm component where the user can add new photos via a POST request passed via props. New photos are displayed at the top of the page.
 
-How does it do the above?
-
-The user also has the ability to add more photos. Each new photo is displayed first.
-
-How does it do the above?
-
-To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.heroku.com)  
+<!-- To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.heroku.com) -->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -102,6 +93,14 @@ How does someone use this application? Tell a user story here.
 7. To add a photo, you'll need to provide a url, title, and description.
 5. The newest photos will be displayed first.
 6. Enjoy!  
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- Updates -->
+## Updates
+
+- [ ] Use [multer](http://github.com/expressjs/multer) for image upload
+- [ ] Deploy to Heroku
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

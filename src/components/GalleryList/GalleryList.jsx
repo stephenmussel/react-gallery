@@ -6,6 +6,8 @@ import Paper from '@mui/material/Paper';
 function GalleryList({ gallery, heartPhoto, deletePhoto }) {
     return (
         <div className="gallery-container">
+
+            {/* The map function passes info for each photo into the GalleryItem component */}
             {gallery.map(each => (
                 <Paper elevation={5} key={each.id}>
                     <GalleryItem

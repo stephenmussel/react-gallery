@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import Stack from '@mui/material/Stack';
-
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -14,8 +12,8 @@ function GalleryItem({ each, heartPhoto, deletePhoto }) {
         <div key={each.id} className="item-container">
             <h2 className="photo-title">{each.title}</h2>
             <div className="photo-container">
-                <img 
-                    src={each.path} 
+                <img
+                    src={each.path}
                     alt="gallery photo"
                     onClick={() => click ? setClick(false) : setClick(true)}
                     className={click ? "" : "reduce-opacity"}
@@ -23,8 +21,8 @@ function GalleryItem({ each, heartPhoto, deletePhoto }) {
                 <p className="photo-description"
                     onClick={() => click ? setClick(false) : setClick(true)}
                 >
-                    {click ? "" : each.description} 
-                </p> 
+                    {click ? "" : each.description}
+                </p>
             </div>
             <div className="heart-delete-container">
                 <div>
@@ -43,11 +41,9 @@ function GalleryItem({ each, heartPhoto, deletePhoto }) {
                     </IconButton>
                 </div>
             </div>
-            {/* {click ? "" : <p>{each.description}</p>}  */}
-
         </div>
 
-        
+
     )
 }
 
