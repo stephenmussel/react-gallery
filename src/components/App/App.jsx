@@ -110,7 +110,7 @@ function App() {
     <div className="App">
       <div className="sticky-container">
       <header className="App-header">
-        <h1 className="App-title">Likes of Phaydara</h1>
+        <h1 className="App-title">The Likes of Phaydara</h1>
       </header>
 
       {/* Component to add photos and info to DB */}

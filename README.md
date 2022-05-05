@@ -101,6 +101,8 @@ How does someone use this application? Tell a user story here.
 
 - [ ] Use [multer](http://github.com/expressjs/multer) for image upload
 - [ ] Deploy to Heroku
+- [ ] Make GalleryForm sticky footer?
+- [ ] Add fader component for first like: "I'll never forget you!"
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

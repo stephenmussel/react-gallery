@@ -38,7 +38,7 @@ function GalleryForm({ handleSubmit, setPath, setTitle, setDescription, path, ti
                         onChange={(event) => setDescription(event.target.value)}
                         value={description}
                     ></TextField>
-                    <Button variant="contained" type="submit">Add</Button>
+                    <Button variant="contained" type="submit" color="secondary">Add</Button>
                 </div>
             </Box>
             <br /><br />
