@@ -19,6 +19,7 @@ function App() {
     fetchGallery();
   }, [])
 
+  // GET request to server for photo info
   const fetchGallery = () => {
     console.log('in fetchGallery');
 
@@ -33,6 +34,7 @@ function App() {
     });
   };
 
+  // PUT request to server to update like count
   const heartPhoto = (photoId) => {
     console.log('in heartPhoto');
 
@@ -47,6 +49,7 @@ function App() {
     });
   };
 
+  // input validation to make sure both inputs are not empty
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log('in handleSubmit');
@@ -58,6 +61,7 @@ function App() {
     };
   };
 
+  // POST request to server to create new record in DB
   const addPhoto = () => {
     console.log('in addPhoto');
 
@@ -83,9 +87,11 @@ function App() {
     });
   };
 
+  // DELETE request to server to delete selected photo
   const deletePhoto = (id) => {
     console.log('clicked delete button');
 
+    // confirms deletion
     if(confirm('Are you sure you want to delete this?')) {
       axios({
         method: 'DELETE',
@@ -106,8 +112,8 @@ function App() {
       <header className="App-header">
         <h1 className="App-title">Likes of Phaydara</h1>
       </header>
-      {/* <p>Gallery goes here</p> */}
-      {/* {JSON.stringify(gallery)} */}
+
+      {/* Component to add photos and info to DB */}
       <GalleryForm
         handleSubmit={handleSubmit}
         setPath={setPath}
@@ -117,8 +123,9 @@ function App() {
         title={title}
         description={description}
       />
-      {/* <Divider></Divider> */}
       </div>
+
+      {/* Component that displays list of photos and information from DB */}
       <GalleryList
         gallery={gallery}
         heartPhoto={heartPhoto}
