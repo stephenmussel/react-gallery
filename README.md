@@ -83,7 +83,6 @@ The App.jsx uses HTTP requests to retrieve/update info from a database. The info
 
 <!-- USAGE -->
 ## Usage
-How does someone use this application? Tell a user story here.
 
 1. The app displays a collection of photos with the ability to like and delete a photo.
 2. Liking a photo will increment the heart counter and display a full heart.
