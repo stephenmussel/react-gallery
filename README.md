@@ -7,11 +7,12 @@
 -->
 
 <!-- To Do Checklist -->
-# To Do Checklist
+<!-- # To Do Checklist
 
 - [ ] Add comments
 - [ ] Refactor  
 <br />
+-->
 
 # REACT GALLERY  
 
@@ -85,14 +86,15 @@ The App.jsx uses HTTP requests to retrieve/update info from a database. The info
 How does someone use this application? Tell a user story here.
 
 1. The app displays a collection of photos with the ability to like and delete a photo.
-2. Liking a photo will increment the heart counter.
-3. Clicking the photo will display a description.
-4. Clicking the description will re-display the photo.
-5. If the user decides to delete a photo, they will need to confirm their decision. 
-6. The user can also add more photos to the gallery.
-7. To add a photo, you'll need to provide a url, title, and description.
-5. The newest photos will be displayed first.
-6. Enjoy!  
+2. Liking a photo will increment the heart counter and display a full heart.
+3. Photos with 0 likes will display an outlined heart.
+4. Clicking the photo will display a description.
+5. Clicking the description will re-display the photo.
+6. If the user decides to delete a photo, they will need to confirm their decision. 
+7. The user can also add more photos to the gallery.
+8. To add a photo, you'll need to provide a url, title, and description.
+9. The newest photos will be displayed first.
+10. Enjoy!  
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

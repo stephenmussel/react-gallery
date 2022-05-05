@@ -3,6 +3,7 @@ const router = express.Router();
 const pool = require('../modules/pool')
 
 // GET route
+// Sends photos and info
 router.get('/', (req, res) => {
     console.log('in router.get');
 
@@ -18,6 +19,7 @@ router.get('/', (req, res) => {
 }); // END GET route
 
 // PUT route
+// Updates like count for each photo
 router.put('/like/:id', (req, res) => {
     console.log('in router.put');
 
@@ -37,6 +39,7 @@ router.put('/like/:id', (req, res) => {
 }); // END PUT route
 
 // POST route
+// Adds new photo
 router.post('/', (req, res) => {
     console.log('in router.post');
 
@@ -61,6 +64,7 @@ router.post('/', (req, res) => {
 }); // END POST route
 
 // DELETE route
+// Deletes photo
 router.delete('/:id', (req, res) => {
     console.log('in router.delete');
 

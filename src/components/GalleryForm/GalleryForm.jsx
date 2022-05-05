@@ -6,6 +6,8 @@ import '../GalleryForm/GalleryForm.css';
 function GalleryForm({ handleSubmit, setPath, setTitle, setDescription, path, title, description }) {
 
     return (
+
+        // Displays form elements to add new photo
         <div className="form-container">
             <h2>Add New Photos</h2>
             <Box

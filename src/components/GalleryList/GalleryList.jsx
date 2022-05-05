@@ -7,7 +7,8 @@ function GalleryList({ gallery, heartPhoto, deletePhoto }) {
     return (
         <div className="gallery-container">
 
-            {/* The map function passes info for each photo into the GalleryItem component */}
+            {/* The map function passes info for each photo into the GalleryItem component. 
+            The heartPhoto and deletePhoto functions are passed via props. */}
             {gallery.map(each => (
                 <Paper elevation={5} key={each.id}>
                     <GalleryItem
