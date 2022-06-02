@@ -50,9 +50,17 @@ function App() {
   };
 
   // PUT request to update dislike count
-  const dislikePhoto = () => {
+  const dislikePhoto = (photoId) => {
     console.log('in dislikePhoto');
 
+    axios.put(`/gallery/dislike/${photoId}`)
+      .then(response => {
+        console.log('clicked dislike', response);
+        fetchGallery();
+      })
+      .catch(err => {
+        console.log('err disliking!', err);
+      })
   }
 
   // input validation to make sure both inputs are not empty
