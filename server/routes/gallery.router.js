@@ -38,6 +38,25 @@ router.put('/like/:id', (req, res) => {
         });
 }); // END PUT route
 
+// PUT route to update dislike count for each photo
+router.put('/dislike/:id', (req, res) => {
+    console.log('in dislike route');
+
+    const photoId = req.params.id;
+    console.log('dislike photoId:', photoId);
+    const queryText = `UPDATE photos SET dislikes = dislikes - 1 WHERE id = $1;`;
+    pool.query(queryText, [photoId])
+        .then(result => {
+            console.log('updated dislikes w/photoId', photoId);
+            res.sendStatus(200);
+        })
+        .catch(err => {
+            console.log('err in disliking', err);
+            res.sendStatus(500);
+        })
+
+})
+
 // POST route
 // Adds new photo
 router.post('/', (req, res) => {

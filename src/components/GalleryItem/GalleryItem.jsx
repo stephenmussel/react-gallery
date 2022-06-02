@@ -47,7 +47,8 @@ function GalleryItem({ each, heartPhoto, deletePhoto, dislikePhoto }) {
                     }
                 </div>
                 <div>
-                    <button onClick={dislikePhoto}>dislike</button>
+                    <button onClick={() => dislikePhoto(each.id)}>dislike</button>
+                    {each.dislikes}
                 </div>
                 <div>
                     <IconButton
