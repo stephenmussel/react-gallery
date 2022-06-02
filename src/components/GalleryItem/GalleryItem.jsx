@@ -48,7 +48,9 @@ function GalleryItem({ each, heartPhoto, deletePhoto, dislikePhoto }) {
                         </IconButton>
                     }
                 </div>
-                <div>
+
+                {/* TODO: what to do with this feature (dislike button)? */}
+                {/* <div>
                     {each.dislikes ?
                         <IconButton onClick={() => dislikePhoto(each.id)}>
                             <ThumbDownAltIcon color="secondary" style={{ marginRight: 5 }} />
@@ -59,7 +61,7 @@ function GalleryItem({ each, heartPhoto, deletePhoto, dislikePhoto }) {
                             {each.dislikes}
                         </IconButton>
                     }
-                </div>
+                </div> */}
                 <div>
                     <IconButton
                         aria-label="delete"
