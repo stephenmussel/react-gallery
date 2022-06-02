@@ -3,6 +3,8 @@ import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
+import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 import '../GalleryItem/GalleryItem.css';
 
 function GalleryItem({ each, heartPhoto, deletePhoto, dislikePhoto }) {
@@ -47,8 +49,16 @@ function GalleryItem({ each, heartPhoto, deletePhoto, dislikePhoto }) {
                     }
                 </div>
                 <div>
-                    <button onClick={() => dislikePhoto(each.id)}>dislike</button>
-                    {each.dislikes}
+                    {each.dislikes ?
+                        <IconButton onClick={() => dislikePhoto(each.id)}>
+                            <ThumbDownAltIcon color="secondary" style={{ marginRight: 5 }} />
+                            {each.dislikes}
+                        </IconButton> :
+                        <IconButton onClick={() => dislikePhoto(each.id)}>
+                            <ThumbDownOffAltIcon color="secondary" style={{ marginRight: 5 }} />
+                            {each.dislikes}
+                        </IconButton>
+                    }
                 </div>
                 <div>
                     <IconButton
