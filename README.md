@@ -104,6 +104,7 @@ The App.jsx uses HTTP requests to retrieve/update info from a database. The info
 - [ ] Deploy to Heroku
 - [ ] Make GalleryForm sticky footer?
 - [ ] Add fader component for first like: "I'll never forget you!"
+- [ ] Add ability to dislike image
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
