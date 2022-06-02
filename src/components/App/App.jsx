@@ -49,6 +49,12 @@ function App() {
     });
   };
 
+  // PUT request to update dislike count
+  const dislikePhoto = () => {
+    console.log('in dislikePhoto');
+
+  }
+
   // input validation to make sure both inputs are not empty
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -130,6 +136,7 @@ function App() {
         gallery={gallery}
         heartPhoto={heartPhoto}
         deletePhoto={deletePhoto}
+        dislikePhoto={dislikePhoto}
       />
     </div>
   );

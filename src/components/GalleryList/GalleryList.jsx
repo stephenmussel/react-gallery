@@ -3,7 +3,7 @@ import './GalleryList.css';
 import Paper from '@mui/material/Paper';
 
 
-function GalleryList({ gallery, heartPhoto, deletePhoto }) {
+function GalleryList({ gallery, heartPhoto, deletePhoto, dislikePhoto }) {
     return (
         <div className="gallery-container">
 
@@ -16,6 +16,7 @@ function GalleryList({ gallery, heartPhoto, deletePhoto }) {
                         each={each}
                         heartPhoto={heartPhoto}
                         deletePhoto={deletePhoto}
+                        dislikePhoto={dislikePhoto}
                     />
                 </Paper>
             ))}

@@ -5,7 +5,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import '../GalleryItem/GalleryItem.css';
 
-function GalleryItem({ each, heartPhoto, deletePhoto }) {
+function GalleryItem({ each, heartPhoto, deletePhoto, dislikePhoto }) {
 
     const [click, setClick] = useState(true);
 
@@ -45,6 +45,9 @@ function GalleryItem({ each, heartPhoto, deletePhoto }) {
                             {each.likes}
                         </IconButton>
                     }
+                </div>
+                <div>
+                    <button onClick={dislikePhoto}>dislike</button>
                 </div>
                 <div>
                     <IconButton
