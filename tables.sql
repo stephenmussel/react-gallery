@@ -9,6 +9,10 @@ CREATE TABLE photos (
     "likes" INT DEFAULT 0
 );
 
+-- Add new column to table
+ALTER TABLE photos
+	ADD dislikes integer default 0;
+
 INSERT INTO photos ("title", "path", "description")
 VALUES
     ('Northwoods Minnesota', 'images/nature-2.jpg', 'Fall colors on the North Shore of Minnesota.'),
